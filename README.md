@@ -1,5 +1,5 @@
 # networkscan
-Scan the entire internet for active IP addresses.
+Scan the entire internet for active websites.
 
 > mess around with the settings at the bottom of the script and try find the best one.
 
