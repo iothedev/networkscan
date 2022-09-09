@@ -8,7 +8,7 @@ init(autoreset=True)
 
 class Scan:
     def __init__(
-        self: None,
+        self,
         timeout: int,
         threads: int
     ) -> None:
@@ -18,20 +18,20 @@ class Scan:
         self.ips = {}
 
     @property
-    def ip_addr(self: None) -> str:
+    def ip_addr(self) -> str:
         return ".".join(
             [
                 str(randint(1, 225)) for _ in range(4)
             ]
         )
 
-    def log(self: None) -> None:
+    def log(self) -> None:
         while True:
             for ip in {**self.ips}:
                 print(self.ips[ip]['colour'] + ip)
                 del self.ips[ip]
 
-    def scan_internet(self: None) -> None:
+    def scan_internet(self) -> None:
         while True:
             ip_addr = self.ip_addr
 
@@ -53,7 +53,7 @@ class Scan:
                     "colour": Fore.GREEN
                 }
 
-    def start(self: None) -> None:
+    def start(self) -> None:
         threads = []
 
         logger = Thread(target=self.log)
