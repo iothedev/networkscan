@@ -71,5 +71,5 @@ class Scan:
 if __name__ == "__main__":
     Scan(
         timeout=15,
-        threads=10000000000000000000
+        threads=69
     ).start()
